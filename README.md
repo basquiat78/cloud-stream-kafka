@@ -100,7 +100,7 @@ See [Redis, Kafka, RabbitMQ](https://donchev.is/post/redis-kafka-ra)
         
 이것을 단순하게 어노테이션과 application.yml 설정만으로 할 수 있게 도와주는 spring-cloud-starter-stream-kafka     
 
-그냥 펀하게 pub/sub을 구현하고 싶다구요!
+위와 같이 하지 말고 그냥 편하게 pub/sub을 구현하고 싶다!
 
 ````
 public interface MessageStreams {
