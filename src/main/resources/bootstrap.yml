@@ -1,0 +1,17 @@
+spring:
+  application:
+      name: kafka-stream
+  profiles:
+    active: local
+
+---
+spring:
+  profiles: local
+
+---
+spring:
+  profiles: stage
+
+---
+spring:
+  profiles: prod

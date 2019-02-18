@@ -1,0 +1,16 @@
+#spring profiles : LOCAL
+# 의문점은 destination를 정의하는 이유 찾지 못함. 저값과 상관없이 잘되는데???
+spring:
+  profiles: local
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        inboundMessage:
+          destination: message
+          contentType: application/json
+        outboundMessage:
+          destination: message
+          contentType: application/json
