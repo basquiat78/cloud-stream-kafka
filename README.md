@@ -6,6 +6,28 @@ spring boot, spring-cloud-stream, kafka
 
 See [Redis, Kafka, RabbitMQ](https://donchev.is/post/redis-kafka-ra)    
 
+# kafka를 깔아보자
+
+[다운로드 kafka](https://kafka.apache.org/downloads)    
+    
+    
+다운로드 받은 이후에 원하는 위치에 압축을 푼다.    
+압축을 풀고 CMD창 또는 터미널을 띄워서 해당 폴더로 이동한다.    
+
+
+1. zookeeper run
+    
+```
+bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties    
+```
+    
+2. kafka run    
+
+```
+bin\windows\kafka-server-start.bat .\config\server.properties
+```
+
+    
 
 # 고전적인 레디스, 카프카 Configuration    
     
@@ -182,7 +204,7 @@ application.yml은 다음과 같이 설정으로 끝낸다.
 MessageStreams에서 설정한 in/out 메쏘드를 message라는 topic으로 묶는다.    
     
     
-# 왜 썼니?
+# At A Glance
 
 어떤 요청이 들어오면 해당 서비스는 들어온 요청에 대한 특정 비지니스 로직을 탄다.
 그 이후에 해당 task에 대한 처리를 id와 type으로 정보를 담아 redis 또는 kafka를 통해 다른 서비스로 요청 메세지를 보내는 형식이다.    
